@@ -9,8 +9,19 @@ pipeline {
     }
 
     stage('command') {
-      steps {
-        sh 'ls -al'
+      parallel {
+        stage('command') {
+          steps {
+            sh 'ls -al'
+          }
+        }
+
+        stage('readme') {
+          steps {
+            echo 'now jenkins'
+          }
+        }
+
       }
     }
 
