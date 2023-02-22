@@ -31,5 +31,11 @@ pipeline {
       }
     }
 
+    stage('built') {
+      steps {
+        sh 'docker build /dockerfile .'
+      }
+    }
+
   }
 }
