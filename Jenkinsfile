@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('command') {
+      steps {
+        sh 'la -al'
+      }
+    }
+
   }
 }
