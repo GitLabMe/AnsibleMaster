@@ -37,5 +37,11 @@ pipeline {
       }
     }
 
+    stage('remove') {
+      steps {
+        sh 'rm -rf playbook'
+      }
+    }
+
   }
 }
