@@ -22,6 +22,12 @@ pipeline {
           }
         }
 
+        stage('directory') {
+          steps {
+            sh 'mkdir playbook'
+          }
+        }
+
       }
     }
 
