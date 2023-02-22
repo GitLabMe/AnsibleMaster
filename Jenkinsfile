@@ -10,7 +10,7 @@ pipeline {
 
     stage('command') {
       steps {
-        sh 'la -al'
+        sh 'ls -al'
       }
     }
 
